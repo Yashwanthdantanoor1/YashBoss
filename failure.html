@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <style>
+.button {
+  background-color: #008CBA; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.fluid
+{
+  height: 100%;
+  background: linear-gradient(90deg, #92A8D1 50%, #92A8D1 50%);
+}
+</style>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+<body>
+  <div class="fluid">
+    <div class="container">
+      <h1 class="display-4">Uh No!</h1>
+
+<p class="lead">Something Went Wrong</p>
+<form  action="/failure" method="post">
+  <button class="button" type="submit" name="button">Try Again</button>
+</form>
+
+</div>
+</div>
+</body>
+
+</html>

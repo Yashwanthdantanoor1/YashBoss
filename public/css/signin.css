@@ -1,0 +1,50 @@
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #92A8D1;
+}
+.button{background-color: #008CBA;}
+.fluid
+{
+  height: 100%;
+  background: linear-gradient(90deg, #92A8D1 50%, #00FFFF 50%);
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+.form-signin input[type="text1"] {
+  margin-bottom: -2px;
+  border-top-right-radius: 2;
+  border-top-left-radius: 2;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+
+}
+.form-signin input[type="text2"] {
+  margin-bottom: -2px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+
+}
+.form-signin input[type="email"] {
+  margin-bottom: 5px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 2;
+  border-bottom-left-radius: 2;
+
+}
