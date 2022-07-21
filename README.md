@@ -1,2 +1,2 @@
 # YashBoss
-An web appliction
+A web appliction
