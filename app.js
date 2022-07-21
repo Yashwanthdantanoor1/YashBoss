@@ -54,10 +54,3 @@ app.post("/",function(req,res){
 app.listen(process.env.PORT || 3000, function(){
   console.log("Server Started...");
 })
-
-
-
-// apikey
-// 554afe3db5ba8ba8a0c1c22b0e7aa06f-us8
-// list ID
-// ffe8af5a5f
