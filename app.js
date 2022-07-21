@@ -34,7 +34,7 @@ app.post("/",function(req,res){
   const url = 'https://us8.api.mailchimp.com/3.0/lists/ffe8af5a5f';
   const options = {
     method: "POST",
-    auth: "Yash:554afe3db5ba8ba8a0c1c22b0e7aa06f-us8"
+    auth: "Yash:8c84b8071269c0f73c7be96946d6ea41-us8"
   }
   const request = https.request(url,options,function(response){
     if (response.statusCode === 200){
@@ -51,7 +51,7 @@ app.post("/",function(req,res){
   request.end();
 })
 
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
   console.log("Server Started...");
 })
 
