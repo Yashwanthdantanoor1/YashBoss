@@ -1,0 +1,14 @@
+<%- include partials/header.ejs %>
+<h1>Home Page</h1>
+  <ul>
+    <li><p>
+      <%=startingcont%>
+    </p></li>
+    </ul>
+<%composecont.forEach(function(contcompose){%>
+<h1><%=contcompose.titles%></h1>
+<p><%=contcompose.contents.substring(0,100) + "..."%> <a href="/posts/<%=contcompose.titles%>">Read More</a></p>
+<%})%>
+
+
+<%- include partials/footer.ejs %>
