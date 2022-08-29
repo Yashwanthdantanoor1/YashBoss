@@ -32,11 +32,14 @@
     </div>
 
     <div class="box">
-      <% addlist.forEach(function(items){%>
-        <div class="item">
-          <input type="checkbox" name="" value="">
-          <p><%=items.name%></p>
-        </div>
+      <%addlist.forEach(function(item){%>
+        <form action="/deletework" method="post">
+          <div class="item">
+            <input type="checkbox" name= "checkbox" value=<%=item._id%> onChange = "this.form.submit()">
+            <p><%=item.name%></p>
+          </div>
+        </form>
+
       <%})%>
         <form action="/" method="post">
         <input type="text" name="addnewlist" placeholder="New Item" autocomplete="off">

@@ -31,9 +31,9 @@
 
   <div class="box">
     <%addlist.forEach(function(item){%>
-      <form action="/" method="post">
+      <form action="/deletehome" method="post">
         <div class="item">
-          <input type="checkbox" name="" value="">
+          <input type="checkbox" name= "checkbox" value=<%=item._id%> onChange = "this.form.submit()">
           <p><%=item.name%></p>
         </div>
       </form>

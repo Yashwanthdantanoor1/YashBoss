@@ -63,9 +63,7 @@ app.get("/work", function(req, res) {
         if(err){
           console.log(err);
         }
-        else{
-          console.log("updated");
-        }
+        
       });
     }
 
@@ -108,6 +106,29 @@ app.post("/", function(req, res) {
   } else if (req.body.Homepage == "") {
     res.redirect("/")
   }
+})
+
+app.post("/deletehome",function(req,res){
+  const checkedid = req.body.checkbox;
+  Item.deleteOne({_id: checkedid}, function(err){
+    if(err){
+      console.log(err);
+    }
+    else{
+        res.redirect("/")
+    }
+  })
+})
+app.post("/deletework",function(req,res){
+  const checkedid = req.body.checkbox;
+  Item.deleteOne({_id: checkedid}, function(err){
+    if(err){
+      console.log(err);
+    }
+    else{
+        res.redirect("/work")
+    }
+  })
 })
 
 
