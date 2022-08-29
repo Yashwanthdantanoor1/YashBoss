@@ -1,41 +1,51 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>TODO-LIST</title>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
 
-  <body>
-    <form action="/" method="post">
-      <div class="navbutton">
-        <div class="container">
-          <button type="submit" name="Homepage" id=changenav>Day List</button>
-        </div>
-        <div class="container">
-          <button type="submit" name="newworkpage" id=changenav>Work List</button>
-        </div>
+<head>
+  <meta charset="utf-8">
+  <title>TODO-LIST</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <form action="/" method="post">
+    <div class="navbutton">
+      <div class="container">
+        <button type="submit" name="Homepage" id=changenav>Day List</button>
       </div>
-    </form>
-    <div class="headbox" id="heading">
-      <button type="submit" name="date" id=changebutton>
-      <h1><%=listTitle%></h1></button>
+      <div class="container">
+        <button type="submit" name="newworkpage" id=changenav>Work List</button>
+      </div>
     </div>
+  </form>
+  <div class="headbox" id="heading">
+    <button type="submit" name="date" id=changebutton>
+      <h1><%=listTitle%></h1>
+    </button>
 
-    <div class="box">
-        <%for(var i=0;i<addlist.length;i++){%>
-          <div class="item">
-              <input type="checkbox" name="" value="">
-              <p><%=addlist[i]%></p>
-          </div>
-        <%}%>
+  </div>
+  <div class="headbox" id='heading'>
+    <h3><%=Date%></h3>
+  </div>
+
+
+  <div class="box">
+    <%addlist.forEach(function(item){%>
+      <form action="/" method="post">
+        <div class="item">
+          <input type="checkbox" name="" value="">
+          <p><%=item.name%></p>
+        </div>
+      </form>
+
+    <%})%>
         <form action="/" method="post">
         <input type="text" name="addnewlist" placeholder="New Item" autocomplete="off">
         <button type="submit" name="submit" id=addbutton value =<%=listTitle %>>ADD</button>
-        </form>
-    </div>
+    </form>
+  </div>
 
 
-  </body>
+</body>
 
 </html>

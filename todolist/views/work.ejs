@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>TODO-LIST</title>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
+
+<head>
+  <meta charset="utf-8">
+  <title>TODO-LIST</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
 
   <body>
-    <body>
-      <form action="/" method="post">
-        <div class="navbutton">
-          <div class="container">
-            <button type="submit" name="Homepage" id=changenav>General List</button>
-          </div>
-          <div class="container">
-            <button type="submit" name="newworkpage" id=changenav>Work List</button>
-          </div>
+    <form action="/" method="post">
+      <div class="navbutton">
+        <div class="container">
+          <button type="submit" name="Homepage" id=changenav>Day List</button>
         </div>
-      </form>
+        <div class="container">
+          <button type="submit" name="newworkpage" id=changenav>Work List</button>
+        </div>
+      </div>
+    </form>
 
     <div class="headbox" id="heading">
       <button type="submit" name="date" id=changebutton>
-      <h1><%=worktitle%></h1></button>
+        <h1><%=worktitle%></h1>
+      </button>
+    </div>
+    </div>
+    <div class="headbox" id='heading'>
+      <h3><%=Date%></h3>
     </div>
 
     <div class="box">
-        <%for(var i=0;i<addlist.length;i++){%>
-          <div class="item">
-              <input type="checkbox" name="" value="">
-              <p><%=addlist[i]%></p>
-          </div>
-        <%}%>
+      <% addlist.forEach(function(items){%>
+        <div class="item">
+          <input type="checkbox" name="" value="">
+          <p><%=items.name%></p>
+        </div>
+      <%})%>
         <form action="/" method="post">
         <input type="text" name="addnewlist" placeholder="New Item" autocomplete="off">
         <button type="submit" name="submit" id=addbutton value =<%=worktitle %>>ADD</button>
-        </form>
+      </form>
     </div>
 
 
